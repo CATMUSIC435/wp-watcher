@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>WP Watcher - Options</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 16px; }
+    input, button { padding:8px; margin:4px 0; }
+    .site { border:1px solid #ddd; padding:8px; border-radius:6px; margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;}
+    .site .left {max-width:80%}
+  </style>
+</head>
+<body>
+  <h2>WP New Post Watcher — Settings</h2>
+
+  <label>
+    Check every (minutes):
+    <input id="interval" type="number" min="1" value="1" style="width:70px"/>
+  </label>
+  <hr/>
+
+  <h3>Sites</h3>
+  <div>
+    <input id="siteUrl" placeholder="https://example.com" style="width:60%"/>
+    <input id="siteName" placeholder="Optional name" style="width:25%"/>
+    <button id="addBtn">Add site</button>
+  </div>
+
+  <div id="sitesList"></div>
+
+  <hr/>
+  <button id="saveBtn">Save & Reschedule</button>
+  <button id="checkNowBtn">Check Now</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
